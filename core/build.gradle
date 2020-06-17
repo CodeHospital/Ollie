@@ -9,7 +9,7 @@ props.load(new FileInputStream(file('../local.properties')))
 
 ext.android = [
 		sdk   : props["sdk.dir"],
-		target: 'android-21'
+		target: 'android-23'
 ]
 
 repositories {
@@ -18,7 +18,7 @@ repositories {
 
 dependencies {
 	compile files("${android.sdk}/platforms/${android.target}/android.jar")
-	compile files("${android.sdk}/extras/android/support/v4/android-support-v4.jar")
+	compile files("android-support-v4.jar")
 	compile 'io.reactivex:rxjava:1.0.2'
 
 	testCompile project(':compiler')
